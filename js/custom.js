@@ -6,7 +6,7 @@ $(function(){
         autoplay: true,
         autoplaySpeed: 3000,
         arrows: true,
-        dots: true,
+        dots: false,
         prevArrow: '<i class="fal fa-chevron-square-left left_arrow"></i>',
         nextArrow: '<i class="fal fa-chevron-square-right right_arrow"></i>',
         responsive: [
