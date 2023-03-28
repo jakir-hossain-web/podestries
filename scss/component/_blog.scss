@@ -1,0 +1,145 @@
+#blog{
+    padding: 100px 0;
+    .blog_head{
+        padding: 0 15px 60px 15px;
+        h2{
+            @include section_head();
+        }
+        p{
+            @include section_head_para();
+        }
+    }
+    .blog_part{
+        .blog_item{
+            margin-left: 10px;
+            margin-right: 10px;
+            border: 1px solid #ddd;
+            transition: .8s;
+            .blog_item_top{
+                transition: .8s;
+                position: relative;
+                .blog_overly{
+                    transition: .8s;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 0;
+                    opacity: 0;
+                    visibility: hidden;
+                    background: rgba(0, 0, 0, 0.6);
+                    .blog_overly_icon{
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        background: $sc;
+                        border-radius: 50%;
+                        i{
+                            color: $pc;
+                            font-size: 16px;
+                            padding: 17px;
+                        }
+                    }
+                }
+            }
+            .blgo_item_btm{
+                transition: .8s;
+                display: none;
+                padding: 30px;
+                .blog_btm_head{
+                    h3{
+                        @include font_dynamic($main_font,400,17px,$pc);
+                        text-align: center;
+                    }
+                }
+                .blog_btm_social{
+                    display: flex;
+                    justify-content: space-between;
+                    .blog_s_item{
+                        padding-top: 17px;
+                        padding-bottom: 5px;
+                        text-align: center;
+                        i{
+                            color: #555;
+                            font-size: 13px;
+                        }
+                        p{
+                            display: inline-block;
+                            @include font_dynamic($main_font,400,13px,#555);
+                        }
+                    }
+                }
+                .blog_btm_para{
+                    text-align: center;
+                    p{
+                        @include main_para();
+                        text-align: justify;
+                    }
+                    a{
+                        margin-top: 30px;
+                        transition: .3s;
+                        @include button_hover();
+                        &:hover{
+                            box-shadow: 0 5px 5px $pc;
+                        }
+                    }
+                }
+            }
+            &:hover{
+                .blog_item_top{
+                    clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+                    .blog_overly{
+                        height: 100%;
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
+                .blgo_item_btm{
+                    display: block;
+                }
+            }
+        }
+        
+
+        //  ======= slick-active code for activate hover effect on slick-center mode ***code start***
+        // ### Must remenber- code will be inside on .slick-active.slick-center only, that the code have on the hover ###
+        .slick-active.slick-center{
+            .blog_item_top{
+                clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+                .blog_overly{
+                    height: 100%;
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+            .blgo_item_btm{
+                display: block;
+            }
+        }
+        // ======== slick-active code for activate hover effect on slick-center mode ***code end***
+
+
+        .left_arrow{
+            position: absolute;
+            z-index: 999;
+            left: -100px;
+            color: rgba(85, 85, 85, 0.5);
+            @include slide_arrow();
+            transition: .3s;
+            &:hover{
+                color: $sc;
+            }
+        }
+        .right_arrow{
+            position: absolute;
+            right: -100px;
+            color: rgba(85, 85, 85, 0.5);
+            @include slide_arrow();
+            transition: .3s;
+            &:hover{
+                color: $sc;
+            }
+        }
+    }
+}

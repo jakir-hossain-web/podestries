@@ -1,0 +1,20 @@
+@mixin button_hover() {
+    font-family: $main_font;
+    font-weight: 500;
+    font-size: 16px;
+    color: $pc;
+    padding: 12px 18px;
+    background: $sc;
+    border: 1px solid $sc;
+    text-transform: uppercase;
+}
+@mixin button_main() {
+    font-family: $main_font;
+    font-weight: 500;
+    font-size: 16px;
+    color: #fff;
+    padding: 12px 18px;
+    background: transparent;
+    border: 1px solid #fff;
+    text-transform: uppercase;
+}

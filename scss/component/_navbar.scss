@@ -1,0 +1,38 @@
+.navbar{
+    // position: fixed;
+    // top: 55px;
+    // width: 100%;
+    // z-index: 9999;
+    transition: .2s;
+
+    .nav-link{
+        position: relative;
+        border-left: 1px solid transparent;
+        border-right: 1px solid transparent;
+        @include font_dynamic($main_font,500,16px,$pc);
+        transition: .3s;
+        &:hover {
+            color: $sc;
+            border-left: 1px solid $sc;
+            border-right: 1px solid $sc;
+            &::after{
+                @include after_top();
+            }
+            &::before{
+                @include after_bottom();
+            }
+        }
+    }
+}
+.bg{
+    background: #d65a1c;
+    animation: menu 2s;
+}
+@keyframes menu{
+    from{
+        top: -150px;
+    }
+    to{
+        top: 0px;
+    }
+}

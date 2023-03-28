@@ -1,0 +1,14 @@
+// common link =====================
+@import "./common/common";
+
+// variable link =====================
+@import "./variable/color";
+@import "./variable/font_variable";
+
+// mixin link =====================
+@import "./mixin/button_mix";
+@import "./mixin/font_mix";
+@import "./mixin/others";
+
+// pages link =====================
+@import "./pages/home";

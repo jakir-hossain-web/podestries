@@ -1,0 +1,46 @@
+#client{
+    padding: 100px 0;
+
+    .client_item{
+        padding: 20px 5px;
+        &:hover{
+            img{
+                box-shadow: 0 5px 10px $pc;
+            }
+        }
+    }
+
+    //  ======= slick-active code for activate hover effect on slick-center mode  ***code start***
+    // ### Must remenber- code will be inside on .slick-active.slick-center only, that the code have on the hover ###
+    .slick-active.slick-center{
+            img{
+                box-shadow: 0 5px 10px $pc;
+            }
+
+
+    }
+    // ======== slick-active code for activate hover effect on slick-center mode ***code end***
+
+    .left_arrow {
+        position: absolute;
+        z-index: 999;
+        left: -80px;
+        color: rgba(85, 85, 85, 0.5);
+        @include slide_arrow();
+        transition: .3s;
+        &:hover {
+            color: $sc;
+        }
+    }
+
+    .right_arrow {
+        position: absolute;
+        right: -80px;
+        color: rgba(85, 85, 85, 0.5);
+        @include slide_arrow();
+        transition: .3s;
+        &:hover {
+            color: $sc;
+        }
+    }
+}

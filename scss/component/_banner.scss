@@ -1,0 +1,61 @@
+#banner{
+    background-image: url(../images/banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    .banner_overly{
+        padding-top: 230px;
+        padding-bottom: 220px;
+        background: rgba(0, 0, 0, 0.7);
+        .banner_txt{
+            h1{
+                @include font_dynamic($main_font,500,35px,#fff);
+                span{
+                    color: $sc;
+                }
+            }
+            p{
+                @include banner_para();
+            }
+            .banner_btn{
+                margin-top: 60px;
+                a{
+                    margin-right: 25px;
+                    @include button_main();
+                    &:hover{
+                        @include button_hover();
+                    }
+                }
+            }
+        }      
+        .ar{
+            @include slide_arrow();
+            height: 5px;
+            width: 120px;
+            background: rgb(188, 238, 7);
+        }
+        .left_arrow{
+            position: absolute;
+            z-index: 999;
+            left: -100px;
+            color: rgba(255, 255, 255, 0.5);
+            @include slide_arrow();
+            transition: .3s;
+            &:hover{
+                color: $sc;
+            }
+        }
+        .right_arrow{
+            position: absolute;
+            right: -650px;
+            color: rgba(255, 255, 255, 0.5);
+            @include slide_arrow();
+            transition: .3s;
+            &:hover{
+                color: $sc;
+            }
+        }
+
+    }
+    
+}

@@ -1,0 +1,70 @@
+#about{
+    .about_head{       
+        h2{
+            position: relative;
+            padding-bottom: 40px;
+            @include section_head();
+        }
+        img{
+            position: absolute;
+            top: 0;
+            left: -105%;
+        }
+    }
+    .about_body{
+        .about_manu_title{
+            padding-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+            button{
+                cursor: pointer;
+                border: none;
+                background: transparent;
+                text-transform: uppercase;
+                @include font_dynamic ($main_font,500,18px,$pc);
+            }
+        }
+        .about_title_bar{
+            width: 100%;
+            height: 5px;
+            background: #979797;
+            
+            display: flex;
+            .about_bar{
+                width: 25%;
+                height: 100%;
+            }
+            #bar_1{
+                background: $sc;
+            }
+        }
+        .about_menu_para{
+            p{
+                line-height: 25px;
+                padding-top: 15px;
+                text-align: justify;
+                @include font_dynamic($main_font,400,14px,#555);
+            }
+            .para_bottom{
+                margin-top: 5px;
+            }
+            a{
+                margin-top: 20px;
+                @include button_hover();
+                transition: .3s;
+                &:hover{
+                    box-shadow: 0 5px 5px #353535;
+                }
+            }
+        }
+        .para_two{
+            display: none;
+        }
+        .para_three{
+            display: none;
+        }
+        .para_four{
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,21 @@
+#counter{
+    background-image: url(../images/counter_img.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+   .counter_overly{
+       padding-top: 65px;
+       padding-bottom: 65px;
+       background: rgba(0, 0, 0, 0.8);
+       .counter_item{
+           text-align: center;
+           h2{
+               @include font_dynamic($main_font,700,35px,#fff);
+           }
+           p{
+               padding-top: 20px;
+               @include font_dynamic($main_font,400,18px,#fff);
+           }
+       }
+   }
+}

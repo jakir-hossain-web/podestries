@@ -1,0 +1,36 @@
+@mixin font_dynamic($ff,$fw,$fs,$fc) {
+    font-family: $ff;
+    font-weight: $fw;
+    font-size: $fs;
+    color: $fc;
+}
+@mixin main_para() {
+    font-family: $main_font;
+    font-weight: 400;
+    font-size: 14px;
+    color: #555;
+    padding-top: 20px;
+    line-height: 25px;
+}
+@mixin banner_para () {
+    font-family: $main_font;
+    font-weight: 400;
+    font-size: 14px;
+    color: #ddd;
+    padding-top: 20px;
+    line-height: 25px;
+}
+@mixin section_head_para () {
+    font-family: $main_font;
+    font-weight: 400;
+    font-size: 16px;
+    color: #555;
+    padding-top: 20px;
+    line-height: 25px;
+}
+@mixin section_head () {
+    font-family: $main_font;
+    font-weight: 300;
+    font-size: 35px;
+    color: $pc;
+}
